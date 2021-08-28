@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins',sans-serif;
+}
+body{
+    background-color: #F6F6F6;
+    min-height: 200vh;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px;
+    z-index: 10000;
+}
+/*look, we need to combain the header tag and the sticky class unless it won't work!*/
+header.sticky{
+    padding: 5px 100px;
+    background-color: #000000;
+}
+header .logo{
+    position: relative;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    pointer-events: none;
+    user-select: none;
+    transition: 0.6s;
+}
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li{
+    position: relative;
+    list-style: none;
+}
+header ul li a{
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #000;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+header ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+header ul li:hover::after{
+    width: 100%;
+}
+header.sticky .logo,
+header.sticky ul li a{
+    color: #fff;
+}
+.row{
+    margin-top: 5%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-basis: 50%;
+}
+.social-links{
+    position: fixed;
+    width: 3%;
+    margin-top: 17%;
+    cursor: pointer;
+}
+.social-links img{
+    width: 75%;
+    background-color: #000;
+    border-radius: 50%;
+    margin-left: 11px;
+    transition: 0.5s;
+}
+.social-links img:hover{
+    opacity: 0.8;
+    margin-right: 5%;
+}
+.row .col-one{
+    width: 100%;
+    height: 100%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.row .col-one h2{
+    margin-top: 20%;
+    margin-left: 10%;
+    font-size: 4.5em;
+}
+.row .col-one p{
+    margin-top: 10px;
+    margin-left: 105px;
+    margin-bottom: 5%;
+}
+.row .col-one a{
+    color: #000;
+    margin-left: 105px;
+    padding: 10px 25px;
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 500;
+    transition: 0.5s;
+}
+.row .col-one a:hover{
+   padding: 10px 30px;
+}
+.row .col-two{
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+.row .col-two img{
+    width: 85%;
+}
+.qoutes{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-basis: 20% 80%;
+    position: relative;
+}
+.qoutes img{
+    left: 0;
+    right: 0;
+    width: 50%;
+    height: 300px;
+    margin-top: 15%;
+    margin-left: 8%;
+    pointer-events: none;
+}
+.qoutes h2{
+    font-size: 5em;
+    margin: 15%;
+}
+.about{
+    width: 100%;
+    height: 100vh;
+    display: block;
+    position: relative;
+}
+.about .about-box{
+    display: inline-block;
+    margin: 10% 10% 0 10%;
+    padding: 60px 50px 60px 50px;
+    border: 1px solid #000;
+    border-radius: 40px;
+}
+.about .about-box img{
+    width: 100px;
+    height: 105px;
+    border: 1px solid #000;
+    border-radius: 50%;
+    margin-right: 3.5%;
+} 
+.about .about-box h4{
+    font-size: 25px;
+}
+.about .about-box p{
+    top: 0;
+    padding: 20px;    
+}
+@media (max-width: 900px) {
+    header .logo{
+        font-size: 15px;
+        margin-left: 0;
+    }
+    header ul{
+        display: none;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .social-links{
+        margin-top: 50%;
+    }
+    .col-one{
+        margin-bottom: 10px;
+    }
+    .col-two{
+        margin-top: 20px;
+    }
+    .qoutes{
+        height: 200vh;
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+    .qoutes img{
+        display: none;
+    }
+}
